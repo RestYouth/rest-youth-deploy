@@ -35,6 +35,19 @@
         }
       });
 
+      (function () {
+        var activated = false;
+        function requestFullscreen() {
+          if (activated) return;
+          activated = true;
+          var el = document.documentElement;
+          var fn = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+          if (fn) fn.call(el);
+        }
+        document.addEventListener("click",     requestFullscreen, { once: true });
+        document.addEventListener("touchstart", requestFullscreen, { once: true });
+      })();
+
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
