@@ -1,45 +1,55 @@
-﻿{
+{
   "headers": [
     {
-      "source": "/(.*)\\.js\\.br",
+      "source": "/(.*).br",
       "headers": [
-        { "key": "Content-Encoding", "value": "br" },
-        { "key": "Content-Type", "value": "application/javascript" }
+        {
+          "key": "Content-Encoding",
+          "value": "br"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
       ]
     },
     {
-      "source": "/(.*)\\.wasm\\.br",
+      "source": "/(.*).wasm.br",
       "headers": [
-        { "key": "Content-Encoding", "value": "br" },
-        { "key": "Content-Type", "value": "application/wasm" }
+        {
+          "key": "Content-Encoding",
+          "value": "br"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        }
       ]
     },
     {
-      "source": "/(.*)\\.data\\.br",
+      "source": "/(.*).gz",
       "headers": [
-        { "key": "Content-Encoding", "value": "br" },
-        { "key": "Content-Type", "value": "application/octet-stream" }
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
       ]
     },
     {
-      "source": "/(.*)\\.js\\.gz",
+      "source": "/(.*).wasm.gz",
       "headers": [
-        { "key": "Content-Encoding", "value": "gzip" },
-        { "key": "Content-Type", "value": "application/javascript" }
-      ]
-    },
-    {
-      "source": "/(.*)\\.wasm\\.gz",
-      "headers": [
-        { "key": "Content-Encoding", "value": "gzip" },
-        { "key": "Content-Type", "value": "application/wasm" }
-      ]
-    },
-    {
-      "source": "/(.*)\\.data\\.gz",
-      "headers": [
-        { "key": "Content-Encoding", "value": "gzip" },
-        { "key": "Content-Type", "value": "application/octet-stream" }
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        }
       ]
     }
   ]
