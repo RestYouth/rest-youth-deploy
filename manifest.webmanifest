@@ -1,12 +1,27 @@
 {
-  "name": "RestYouth",
-  "short_name": "RestYouth",
+  "name": {
+    {
+      { JSON.stringify(PRODUCT_NAME)
+      }
+    }
+  },
+  "short_name": {
+    {
+      { JSON.stringify(PRODUCT_NAME)
+      }
+    }
+  },
   "start_url": "index.html",
   "display": "fullscreen",
-  "background_color": "#231F20",
   "orientation": "landscape",
+  "background_color": "#231F20",
   "theme_color": "#000",
-  "description": "쉼청년 게임",
+  "description": {
+    {
+      { JSON.stringify(PRODUCT_DESCRIPTION)
+      }
+    }
+  },
   "icons": [
     {
       "src": "TemplateData/icons/unity-logo-dark.png",
